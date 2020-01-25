@@ -1,21 +1,16 @@
 const Eris = require("eris");
-const fs = require('fs');
+const token = require('./token.js');
 
-var token = '';
-
-fs.readFile('./token.txt', 'utf-8', (err, data) => {
-  if(err) { throw err; }
-  token = data;
-});
-
-var bot = new Eris(token);
+var bot = new Eris(token.token);
 
 bot.on("ready", () => {
-    console.log("Ready!");
+	console.log("Ready!");
 });
+
 bot.on("messageCreate", (msg) => {
-    if(msg.content === "!ping") {
-        bot.createMessage(msg.channel.id, "Pong!");
-    }
+	if (msg.content === "!Pang") {
+		bot.createMessage(msg.channel.id, "Sam jesteś Pang!");
+	}
 });
+
 bot.connect();
