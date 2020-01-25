@@ -1,0 +1,1 @@
+module.exports = { link: "https://vignette.wikia.nocookie.net/gothic/images/d/d3/Gomez_%28Gothic%29.png/revision/latest?cb=20130429165914&path-prefix=pl" };
