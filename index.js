@@ -7,10 +7,13 @@ const gothic = require("./addons/gothic");
 const bot = new Eris.CommandClient(token.token, {}, {
     description: "A test bot made with Eris",
     owner: "somebody",
-    prefix: "!"
+	prefix: "!",
 });
 
 bot.on("ready", () => {
+	bot.editStatus("Kopalnia w Starym Obozie", {
+		name: "Kopię rudę dla Gomeza"
+	});
 	console.log("Ready!");
 });
 
